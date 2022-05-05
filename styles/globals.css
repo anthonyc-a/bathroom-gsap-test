@@ -1,9 +1,7 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #151515;
 }
 
 a {
@@ -12,5 +10,210 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+.page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0rem 2rem;
+}
+
+.page-container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+.page-container .header .logo {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.page-container .header .burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 24px;
+  height: 16px;
+}
+
+.page-container .header .burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #151515;
+}
+
+.page-container .scroll-container {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.page-container .scroll-container .scroll-inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+  height: 100%;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% / 3);
+  height: 100%;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item .item-inner {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item .item-inner .inner-title {
+  overflow: hidden;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item .item-inner .inner-title h2 {
+  font-size: 4.5vw;
+  font-weight: 800;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item .item-inner .inner-description {
+  padding-top: 4px;
+  overflow: hidden;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item .item-inner .inner-description p {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item .item-inner .inner-button {
+  padding-top: 1rem;
+  overflow: hidden;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item .item-inner .inner-button .link {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #151515;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.page-container .scroll-container .scroll-inner .scroll-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  z-index: -1;
+}
+
+.page-container .scroll-container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 64px;
+  background-color: #fff;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.page-container .scroll-container .forw {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container .scroll-container .back {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-container .scroll-container .back svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.page-container .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 20%;
+  font-size: 14px;
+}
+/*# sourceMappingURL=globals.css.map */
