@@ -76,7 +76,7 @@ export default function Home() {
       <div className="header">
         <div className={menuOpen ? "logo active" : "logo"}>bathrooms</div>
         <label
-          for="check"
+          htmlFor="check"
           className={menuOpen ? "burger active" : "burger"}
           onChange={() => {
             setMenuOpen(!menuOpen);
